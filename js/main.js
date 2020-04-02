@@ -1,28 +1,50 @@
 (() => {
-  let teamButtons = document.querySelectorAll(".team"),
-      currentTeamMember = document.querySelector("h3"),
-      personInfo = document.querySelector(".personInfo");
+  let smallImage = document.querySelector('#smallPhoto'),
+      largeImage = document.querySelector('#largePhoto'),
+      memberInfo = document.querySelector('#info'),
+      h3         = document.getElementsByTagName('h3')[0],
+      titleMember = document.querySelector('.title');
 
-  const teamInfo = [
-    ["Linh", `Developer - abc`],
-    ["Sabby", `Designer - xyz`]
 
-  ];
-
-  function showInfo() {
+  const teamInfo = ['Sabby is a student', 'Linh Le is a student'];
+  function memberLoad() {
     //debugger;
-    currentTeamMember.textContent =`${teamInfo[this.dataset.offset][0]}`;
+    largeImage.classList.add('switchAnimation');
+    smallImage.classList.add('switchAnimationSmall');
+    h3.classList.add('switchAnimation');
+    memberInfo.classList.add('switchAnimation');
+    memberInfo.innerHTML = teamInfo[0];
+  }
+  function bioInfo() {
+    //debugger;
+    smallImage.classList.remove('switchAnimationSmall');
+    largeImage.classList.remove('switchAnimation');
+    h3.classList.remove('switchAnimation');
+    memberInfo.classList.remove('switchAnimation');
 
-    personInfo.textContent = `${teamInfo[this.dataset.offset][1]}`;
+
+    smallImage.classList.add('switchAnimationSmall');
+    largeImage.classList.add('switchAnimation');
+    h3.classList.add('switchAnimation');
+    memberInfo.classList.add('switchAnimation');
+
+    if (memberInfo.innerHTML == teamInfo[0]) {
+      largeImage.src = 'images/linh_large.png';
+      smallImage.src = 'images/member2_small.png';
+      memberInfo.innerHTML = teamInfo[1];
+      h3.innerHTML = "Linh";
+    }
+    else {
+      largeImage.src = 'images/member2_large.png';
+      smallImage.src = 'images/linh_small.png';
+
+      memberInfo.innerHTML = teamInfo[0];
+      h3.innerHTML = "Sabby";
+    }
   }
 
 
-
-
-
-  teamButtons.forEach(button => button.addEventListener("click", showInfo));
-
-
-
+  window.addEventListener('load', memberLoad);
+  titleMember.addEventListener('click', bioInfo);
 
 })();
