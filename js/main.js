@@ -30,7 +30,7 @@
 
     if (memberInfo.innerHTML == teamInfo[0]) {
       largeImage.src = 'images/linh_large.png';
-      smallImage.src = 'images/member2_small.png';
+      smallImage.src = 'images/sabby_small.jpg';
       memberInfo.innerHTML = teamInfo[1];
       h3.innerHTML = "Linh";
     }
