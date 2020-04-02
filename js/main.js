@@ -35,7 +35,7 @@
       h3.innerHTML = "Linh";
     }
     else {
-      largeImage.src = 'images/member2_large.png';
+      largeImage.src = 'images/sabby_small.jpg';
       smallImage.src = 'images/linh_small.png';
 
       memberInfo.innerHTML = teamInfo[0];
