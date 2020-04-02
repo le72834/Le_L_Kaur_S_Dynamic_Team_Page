@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: Helvatica, Arial, sans-serif;
   font-size: 12px;
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,8 +13,9 @@ body {
 }
 h2 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
+  color: #8BC6EC;
 }
 h3 {
   font-size: 20px;
@@ -34,14 +35,22 @@ h3 {
   padding: 20px 30px;
   text-align: center;
 }
+.intro {
+  text-align: center;
+  font-family: Didot;
+  font-size: 16px;
+  font-style: italic;
+  color: #9599E2;
+}
 #info {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   margin-left: auto;
-  position: relative;
+  position: fixed;
   top: 200px;
-  right: 500px;
-
+  right: 250px;
+  width: 400px;
+  font-family: Didot;
 }
 #photoCon {
   display: flex;
@@ -92,7 +101,7 @@ h3 {
   text-align: center;
   margin-top: 20px;
   margin-right: 700px;
-
+  font-family: Didot;
 }
 .switchAnimation {
   animation: switchAnimation 3s;
