@@ -1,48 +1,177 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: Helvatica, Arial, sans-serif;
+  font-size: 12px;
+  background-image: url(../images/background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hidden {
+  display: none;
+}
 h2 {
-  font-size: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 20px;
+  display: inline;
+  text-transform: uppercase;
+}
+#content {
+  margin: 0 30px;
+}
+
+#headerBio {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 20px;
+}
+#headerBio h2 {
+  padding: 20px 30px;
+  text-align: center;
+}
+#info {
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: auto;
+  position: relative;
+  top: 200px;
+  right: 500px;
+
+}
+#photoCon {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 200px;
+}
+#smallPhoto {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  cursor: pointer;
+  transition: all .5s ease;
+  width: 10%;
+  border: 10px solid #DDD6F3;
+}
+#largePhoto {
+  width: 30%;
+  border: 10px solid #FAACA8;
+
+
+}
+.title {
+  position: absolute;
+  top: 210px;
+  left: 150px;
+  transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transition: opacity .5s ease;
   text-transform: uppercase;
   font-weight: bold;
-  text-align: center;
-  margin: 40px;
-
-}
-#personImage {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-#personImage img {
-  width: 30%;
-
-}
-.member1 {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-.member1:hover  {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
-}
-.member2 {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-.member2:hover  {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
-}
-
-h3 {
-  text-align: center;
+  color: #fff;
   font-size: 20px;
-  margin: 30px;
-}
-p{
+  width: 150px;
+  height: 100px;
   text-align: center;
-  font-size: 16px;
+}
+.title:hover {
+  color: #789;
+}
+.text {
+  font-size: 18px;
+  cursor: pointer;
+  padding-top: 50px;
+  padding-left: 30px;
+}
+#name {
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 700px;
 
+}
+.switchAnimation {
+  animation: switchAnimation 3s;
+}
+@-webkit-keyframes switchAnimation {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes switchAnimation {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.switchAnimationSmall {
+	animation: switchAnimation 1s .1s;
 }
