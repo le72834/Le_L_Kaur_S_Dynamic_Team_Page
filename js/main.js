@@ -39,7 +39,7 @@
       smallImage.src = 'images/linh_small.png';
 
       memberInfo.innerHTML = teamInfo[0];
-      h3.innerHTML = "Sabby";
+      h3.innerHTML = "Sabnit Kaur";
     }
   }
 
